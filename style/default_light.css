@@ -1,6 +1,16 @@
 :root {
   --color-main-bg: transparent;
-  --color-secondary: var(--colot-green);
-}
+  --color-card-bg: transparent;
+  --color-text-01: var(--dark-black-light);
+  --color-text-02: var(--dark-grey:);
+  --color-text-03: var(--dark-grey:);
+  --color-text-04: var(--color-blue-black);
+  --color-btn-01: var(--color-blue-black);
+  --color-btn-text-01: var(--dark-white);
+  --color-btn-02: var(--dark-white);
+  --color-btn-text-02: var(--color-blue-black);
+  --color-btn-03: var(--dark-white);
+  --color-btn-text-03: var(--dark-grey);
+  --color-btn-pulse: var(--color-blue-easy);
 
-/*# sourceMappingURL=default.css.map */
+}
