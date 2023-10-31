@@ -1,0 +1,13 @@
+<svg viewBox="0 0 21 9" xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <!-- <symbol id="glasses" fill="none"> -->
+    <path
+        d="M8.23804 5.22078C8.23804 4.3884 9.25137 3.71436 10.4999 3.71436C11.7485 3.71436 12.7618 4.3884 12.7618 5.22078"
+        stroke="#253F41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    <path
+        d="M4.61905 8.2381C6.61779 8.2381 8.2381 6.61779 8.2381 4.61905C8.2381 2.6203 6.61779 1 4.61905 1C2.6203 1 1 2.6203 1 4.61905C1 6.61779 2.6203 8.2381 4.61905 8.2381Z"
+        stroke="#253F41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    <path
+        d="M16.381 8.2381C18.3798 8.2381 20.0001 6.61779 20.0001 4.61905C20.0001 2.6203 18.3798 1 16.381 1C14.3823 1 12.762 2.6203 12.762 4.61905C12.762 6.61779 14.3823 8.2381 16.381 8.2381Z"
+        stroke="#253F41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- <symbol> -->
+</svg>
