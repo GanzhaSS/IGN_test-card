@@ -18,7 +18,10 @@ body {
   border-radius: 8px;
   padding: 4px 25px;
   width: 180px;
-  background-color: var(--color-blue-easy);
+  background-color: var(--color-btn-01);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-btn-text-01);
 }
 
 .container {
@@ -96,9 +99,12 @@ body {
   height: 120px;
 }
 
+.icon {
+  align-self: flex-end;
+}
+
 .info {
   display: flex;
-  gap: 24px;
   justify-content: space-between;
 }
 .info__question-number, .info__finish-data {
@@ -106,25 +112,19 @@ body {
   font-weight: 700;
   font-size: 16px;
 }
-.info__question {
-  background-image: url("../img/info__question-icon.svg");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: bottom 2px left;
-}
-.info__finish {
-  background-image: url("../img/info__finish-icon.svg");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: bottom 2px left;
+.info__question, .info__finish {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
 }
 .info__text {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: start;
-  padding-left: 35px;
+  width: 80%;
 }
 
 .container-right {
@@ -202,35 +202,33 @@ body {
   margin-top: -30px;
 }
 
-.author-container {
+.container-author {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 75px;
   flex: 100%;
-  background-image: url("../img/author-icon.svg");
-  background-repeat: no-repeat;
-  background-position: top left;
 }
+
 .author__line {
   flex: 100%;
   height: 1px;
   border-bottom: 1px solid var(--color-text-03);
 }
-.author__avatar {
-  margin-left: 40px;
+.author-icon {
+  align-self: flex-start;
 }
 .author__text {
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: start;
-  flex: 1 0 5%;
-  margin-left: 10px;
-  margin-top: -2px;
+  justify-content: space-evenly;
+  margin-top: -10px;
   text-align: left;
 }
 .author__dev {
   text-decoration: underline;
+  margin-bottom: 6px;
 }
 .author__surname {
   font-size: 16px;
@@ -296,6 +294,7 @@ body {
 }
 .button_pulse:active {
   animation: pulse 0.5s;
+  animation-fill-mode: both;
   box-shadow: 0 0 0 15px transparent;
 }
 @keyframes pulse {
