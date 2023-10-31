@@ -14,7 +14,7 @@ body {
 .btn-toggle {
   margin: 25px;
   align-self: center;
-  border: 1px white solid;
+  border: 1px var(--color-text-03) solid;
   border-radius: 8px;
   padding: 4px 25px;
   width: 180px;
@@ -295,6 +295,7 @@ body {
   box-shadow: 0px 0px 5px 3px var(--color-btn-pulse);
 }
 .button_pulse:active {
+  animation-fill-mode: none;
   animation: pulse 0.5s;
   box-shadow: 0 0 0 15px transparent;
 }

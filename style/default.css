@@ -1,22 +1,27 @@
 :root {
-  --color-red: #b34c4c;
-  --color-green: #379217;
+  --dark-black: #272b33;
+  --color-black: #1a1b25;
+  --dark-black-light: #323232;
+  --dark-black-light-opacity: #3232323a;
+  --dark-dx-dark-black: #2a2a31;
+  --dark-dx-dark-default: #363640;
+  --dark-grey-dark: #5a5a5a;
+  --dark-grey: #888;
+  --dark-white: #f1f1f1;
+
   --color-blue-light: #e0f6ff;
   --color-blue-easy: rgba(36, 112, 160, .7);
   --color-blue: rgba(36, 112, 160, .9);
   --color-blue-dark: rgba(11, 85, 137, .9);
   --color-blue-black: #0b5589;
-  --color-black: #1a1b25;
-  --color-grey: #f1f1f1;
-  --dark-black: #272b33;
-  --dark-black-light: #323232;
-  --dark-black-light-opacity: #3232323a;
-  --dark-white: #f1f1f1;
-  --dark-grey: #888;
-  --dark-grey-dark: #5a5a5a;
+
   --dark-blue: #8d8db5;
   --dark-blue-dark: #6767b1;
-  --dark-dx-dark-default: #363640;
-  --dark-dx-dark-black: #2a2a31;
-  --height-description: 260px ;
-}/*# sourceMappingURL=default.css.map */
+
+  --color-red: #b34c4c;
+  --color-green: #379217;
+
+  --height-description: 260px;
+}
+
+/*# sourceMappingURL=default.css.map */
