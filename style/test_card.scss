@@ -1,4 +1,6 @@
 @import 'default.css';
+@import './button.css';
+
 // @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 
 
@@ -56,6 +58,16 @@ body {
     background-color: var(--color-card-bg);
     user-select: none;
     color: var(--color-text-01);
+
+
+    // neumorphizm
+    border: none;
+    background: none;
+    border-radius: 20px;
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+        -2px -2px 12px rgba(255, 255, 255, 0.5),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+        2px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .light-subtitle {
@@ -282,88 +294,84 @@ body {
     }
 }
 
-.button {
-    border-radius: 8px;
-    width: 125px;
-    text-align: center;
-    vertical-align: bottom;
-    padding: 8px 0px;
-    font-weight: 700;
-    transition: all 0.25s ease-in;
+// .button {
+//     border-radius: 8px;
+//     width: 125px;
+//     text-align: center;
+//     vertical-align: bottom;
+//     padding: 8px 0px;
+//     font-weight: 700;
+//     transition: all 0.25s ease-in;
 
-    cursor: pointer;
+//     cursor: pointer;
 
-    &_container {
-        display: flex;
-        flex: 0 1 100%;
-        justify-content: space-between;
-        align-items: center;
-        // margin-left: 80px;
-    }
+//     &_container {
+//         display: flex;
+//         flex: 0 1 100%;
+//         justify-content: space-between;
+//         align-items: center;
+//         // margin-left: 80px;
+//     }
 
-    &-secondary {
-        background-color: transparent;
-        border: var(--color-text-04) 1px solid;
-        font-size: 16px;
-        color: var(--color-btn-text-02);
-    }
+//     &-secondary {
+//         background-color: transparent;
+//         border: var(--color-text-04) 1px solid;
+//         font-size: 16px;
+//         color: var(--color-btn-text-02);
+//     }
 
-    &-main {
-        background-color: var(--color-btn-01);
-        border: var(--color-btn-text-01) 1px solid;
-        font-size: 16px;
-        color: var(--color-btn-text-01);
-    }
+//     &-main {
+//         background-color: var(--color-btn-01);
+//         border: var(--color-btn-text-01) 1px solid;
+//         font-size: 16px;
+//         color: var(--color-btn-text-01);
+//     }
 
-    &-ref {
-        font-size: 16px;
-        font-weight: 700;
-        text-align: center;
-        border-radius: 8px;
-        line-height: 0.8em;
-        width: 70px;
-        padding: 6px 12px;
-        // background-color: var(--color-btn-02);
-        // height: 30px;
+//     &-ref {
+//         font-size: 16px;
+//         font-weight: 700;
+//         text-align: center;
+//         border-radius: 8px;
+//         line-height: 0.8em;
+//         width: 70px;
+//         padding: 6px 12px;
+//         // background-color: var(--color-btn-02);
+//         // height: 30px;
 
-        &:hover {
-            color: var(--color-text-04);
-        }
-    }
+//         &:hover {
+//             color: var(--color-text-04);
+//         }
+//     }
 
-    &-disabled {
-        font-size: 16px;
-        // border: 1px solid var(--color-btn-text-03);
-        background-color: var(--color-btn-03);
-        color: var(--color-btn-text-03);
-        cursor: auto;
-    }
+//     &-disabled {
+//         font-size: 16px;
+//         // border: 1px solid var(--color-btn-text-03);
+//         background-color: var(--color-btn-03);
+//         color: var(--color-btn-text-03);
+//         cursor: auto;
+//     }
 
-    &_pulse {
-        transition: all 0.25s ease-in;
-    }
+//     &_pulse {
+//         transition: all 0.25s ease-in;
+//     }
 
-    &_pulse:hover {
-        box-shadow: 0px 0px 5px 3px var(--color-btn-pulse);
-    }
+//     &_pulse:hover {
+//         box-shadow: 0px 0px 5px 3px var(--color-btn-pulse);
+//     }
 
-    &_pulse:active {
-        animation-fill-mode: none;
-        animation: pulse .5s;
-<<<<<<< HEAD
+//     &_pulse:active {
+//         animation-fill-mode: none;
+//         animation: pulse .5s;
+//         <<<<<<< HEAD=======animation-fill-mode: both;
+//         >>>>>>>cc8d6d29fd34b1da1ef99ba386cd9390122d93e6 box-shadow: 0 0 0 15px transparent;
+//     }
 
-=======
-        animation-fill-mode: both;
->>>>>>> cc8d6d29fd34b1da1ef99ba386cd9390122d93e6
-        box-shadow: 0 0 0 15px transparent;
-    }
-
-    @keyframes pulse {
-        0% {
-            box-shadow: 0 0 0 0 var(--color-btn-pulse);
-        }
-    }
-}
+//     @keyframes pulse {
+//         0% {
+//             box-shadow: 0 0 0 0 var(--color-btn-pulse);
+//         }
+//     }
+// }
 
 @media(max-width: 1024px) {
 
