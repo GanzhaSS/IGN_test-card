@@ -13,4 +13,6 @@
   --color-btn-03: var(--dark-black);
   --color-btn-text-03: var(--dark-dx-dark-default);
   --color-btn-pulse: var(--dark-blue-dark);
+
+  --color-line: var(--dark-dx-dark-default);
 }

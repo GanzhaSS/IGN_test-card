@@ -1,5 +1,10 @@
-@import 'default.css';
+@import './vars.css';
 @import './button.css';
+@import './frame.css';
+html {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Proxima Nova, monospace !important;
   margin: 0px;
@@ -44,18 +49,10 @@ body {
   padding: 16px;
   width: 432px;
   height: 432px;
-  border: 1px solid var(--dark-grey);
-  border-radius: 35px;
-  box-shadow: 0px 2px 4px 0px var(--dark-black-light-opacity);
-  background-color: var(--color-card-bg);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   color: var(--color-text-01);
-  border: none;
-  background: none;
-  border-radius: 20px;
-  box-shadow: -2px -2px 8px rgb(255, 255, 255), -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .light-subtitle {
@@ -218,7 +215,7 @@ body {
 .author__line {
   flex: 100%;
   height: 1px;
-  border-bottom: 1px solid var(--color-text-03);
+  border-bottom: 1px solid var(--color-line);
 }
 .author-icon {
   align-self: flex-start;
@@ -276,19 +273,10 @@ body {
     overflow: hidden;
     line-height: 0.8em;
   }
-  .info {
-    transition: all 0.25s ease-in;
-    margin-bottom: 8px;
-  }
-  .info__question {
-    background-image: none;
-  }
-  .info__finish {
-    background-image: none;
-  }
   .info__text {
-    padding-left: 0;
+    width: 100%;
   }
+  .icon,
   .container-bottom,
   .bar-container,
   .status__result {

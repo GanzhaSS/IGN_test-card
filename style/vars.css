@@ -6,6 +6,8 @@
   --dark-dx-dark-black: #2a2a31;
   --dark-dx-dark-default: #363640;
   --dark-grey-dark: #5a5a5a;
+  --dark-dx-dark-default: #363640;
+  --dark-dx-dark-black: #2a2a31;
   --dark-grey: #888;
   --dark-white: #f1f1f1;
 
@@ -17,15 +19,11 @@
 
   --dark-blue: #8d8db5;
   --dark-blue-dark: #6767b1;
-  --dark-dx-dark-default: #363640;
-  --dark-dx-dark-black: #2a2a31;
 
   --color-green: #379217;
 
 
-  --height-description: 260px;
-
-  --color-green: #379217;
+  --height-description: 250px;
 }
 
 /*# sourceMappingURL=default.css.map */
