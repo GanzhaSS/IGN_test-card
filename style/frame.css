@@ -1,10 +1,10 @@
 .container-frame {
     /* background: var(--dark-white); */
-    border: none;
-    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
     outline: none;
-    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
-        -6px -6px 10px rgba(255, 255, 255, .5),
-        6px 6px 8px rgba(255, 255, 255, .075),
-        6px 6px 10px rgba(0, 0, 0, .15);
+    box-shadow: -6px -6px 14px var(--color-light-shadow),
+        -6px -6px 10px var(--color-light-shadow),
+        6px 6px 8px var(--color-dark-shadow),
+        6px 6px 10px var(--color-dark-shadow);
 }

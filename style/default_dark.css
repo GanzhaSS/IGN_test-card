@@ -1,6 +1,8 @@
 :root {
   --color-bg-main: var(--dark-dx-dark-black);
   --color-card-bg: var(--dark-dx-dark-default);
+  --color-border: var(--dark-dx-dark-default);
+
   --color-text-01: var(--dark-white);
   --color-text-02: var(--dark-grey);
   --color-text-03: var(--dark-white);
@@ -15,4 +17,7 @@
   --color-btn-pulse: var(--dark-blue-dark);
 
   --color-line: var(--dark-dx-dark-default);
+
+  --color-light-shadow: var(--dark-dx-dark-default);
+  --color-dark-shadow: rgb(29, 29, 29);
 }

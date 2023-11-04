@@ -1,7 +1,10 @@
 @import './vars.css';
 @import './button.css';
+@import './progress_bar.css';
 @import './frame.css';
-html {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -9,7 +12,6 @@ body {
   font-family: Proxima Nova, monospace !important;
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
   font-style: normal;
   display: flex;
   flex-direction: column;
@@ -41,10 +43,8 @@ body {
 
 .test-card-large {
   transition: all 0.1s ease-in;
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
   justify-content: space-evenly;
   padding: 16px;
   width: 432px;
@@ -132,9 +132,8 @@ body {
 .container-right {
   height: var(--height-description);
   display: flex;
-  width: 10%;
+  width: 80px;
   flex-direction: column;
-  flex: auto;
   margin-left: 10px;
   justify-content: space-between;
   align-items: center;
@@ -159,39 +158,6 @@ body {
 }
 .status__points {
   text-align: center;
-}
-
-.bar {
-  background-color: var(--color-green);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50%;
-  box-sizing: border-box;
-  animation: grow 1.5s ease-out forwards;
-  transform-origin: bottom;
-}
-.bar-container {
-  background-color: var(--color-grey);
-  border: 1px var(--dark-grey) solid;
-  border-radius: 2px;
-  top: 0%;
-  width: 10px;
-  height: 50%;
-  transform: translateY(0%);
-}
-@keyframes grow {
-  from {
-    transform: scaleY(0);
-  }
-}
-@keyframes percent-opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .container-bottom {
@@ -220,12 +186,21 @@ body {
 .author-icon {
   align-self: flex-start;
 }
+.author__avatar {
+  margin-left: -32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
 .author__text {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: space-evenly;
   margin-top: -10px;
+  margin-left: -32px;
   text-align: left;
 }
 .author__dev {

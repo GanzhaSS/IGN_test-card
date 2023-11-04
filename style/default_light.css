@@ -1,6 +1,8 @@
 :root {
   --color-main-bg: transparent;
   --color-card-bg: transparent;
+  --color-border: transparent;
+
   --color-text-01: var(--dark-black-light);
   --color-text-02: var(--dark-grey);
   --color-text-03: var(--dark-grey);
@@ -14,4 +16,6 @@
   --color-btn-pulse: var(--color-blue-easy);
   --color-line: var(--dark-white);
 
+  --color-light-shadow: var(--dark-white);
+  --color-dark-shadow: var(--light-grey);
 }

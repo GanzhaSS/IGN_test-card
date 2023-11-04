@@ -1,0 +1,38 @@
+.bar-container {
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+  border: 1px solid var(--color-border);
+  border-radius: 32px;
+  box-shadow: inset -4px -4px 6px -1px var(--color-dark-shadow), inset 2px 2px 8px -1px var(--color-dark-shadow);
+  background-color: transparent;
+  top: 0%;
+  height: 100%;
+  transform: translateY(0%);
+}
+
+.bar {
+  background-color: var(--color-green);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  animation: grow 1.5s ease-out forwards;
+  transform-origin: bottom;
+  border-radius: inherit;
+}
+
+@keyframes grow {
+  from {
+    transform: scaleY(0);
+  }
+}
+@keyframes percent-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=progress_bar.css.map */
