@@ -8,6 +8,31 @@
 // Vars
 
 
+// Mixins
+// Graph
+@mixin shared-styles() {
+    // @include applyFontStyle;
+    padding: 0 8px;
+    position: relative;
+    border: 3px solid var(--color-shadow-light_0);
+    outline: none;
+    text-align: center;
+    // background-color: var(--color-bg);
+    transition: all 250ms ease-in-out;
+
+    // &:hover {
+    //     box-shadow: none;
+    //     border-color: var(--color-shadow-light_100);
+    // }
+}
+
+// .graph {
+//     display: flex;
+//     width: 250px;
+//     align-items: flex-end;
+//     @include gridPlacement(column, 3, 5);
+//     @include gridPlacement(row, 3, 6);
+
 // @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 
 *,
@@ -54,17 +79,33 @@ body {
     padding: 50px;
 }
 
-.test-card-large {
-    transition: all 0.1s ease-in;
+.card {
+    @include shared-styles;
     display: flex;
     flex-wrap: wrap;
-    // align-items: stretch;
+    align-items: stretch;
     justify-content: space-evenly;
     padding: 16px;
+    color: var(--color-text-01);
+    text-align: left;
+    // Check!
     width: 432px;
     height: 432px;
     user-select: none;
-    color: var(--color-text-01);
+
+    box-shadow: var(--shadow-drop);
+    border-radius: 24px;
+
+    &:hover {
+        box-shadow: none;
+        border-color: var(--dark-white);
+
+        /*Свечение*/
+        // -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+        // -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+        // box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+
+    }
 }
 
 .light-subtitle {
@@ -388,7 +429,7 @@ body {
         height: 100px;
     }
 
-    .test-card-large {
+    .card {
         flex-wrap: nowrap;
         width: 320px;
         height: 120px;

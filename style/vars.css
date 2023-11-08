@@ -26,6 +26,37 @@
 
 
   --height-description: 250px;
+
+  /* _________________________________________________________________ */
+
+
+  --color-text: #757575;
+  --color-bg: #ebecf0;
+
+
+  --color-accent-blue: #2470A0;
+  --color-bright-blue: #e038b6;
+
+  --color-shadow-dark_40: #474f6166;
+  --color-shadow-dark_100: #484f60;
+  --color-shadow-light_0: #53090900;
+  --color-shadow-light_40: #ffffff66;
+  --color-shadow-light_100: #ffffff;
+
+
+  --shadow-drop: 8px 8px 12px -2px var(--color-shadow-dark_40),
+    -6px -6px 12px -1px var(--color-shadow-light_100);
+
+  --shadow-inner: inset -4px -4px 6px -1px var(--color-shadow-light_100),
+    inset 2px 2px 8px -1px var(--color-shadow-dark_40);
+
+
+  --height: 54px;
+
+
+  --fontFamily: Proxima Nova, monospace !important;
+  --fontSize: 18px;
+  --fontWeight: 700;
 }
 
 /*# sourceMappingURL=default.css.map */

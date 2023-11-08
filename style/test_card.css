@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import './vars.css';
 @import './button.css';
 @import './progress_bar.css';
@@ -41,18 +42,32 @@ body {
   padding: 50px;
 }
 
-.test-card-large {
-  transition: all 0.1s ease-in;
+.card {
+  padding: 0 8px;
+  position: relative;
+  border: 3px solid var(--color-shadow-light_0);
+  outline: none;
+  text-align: center;
+  transition: all 250ms ease-in-out;
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   justify-content: space-evenly;
   padding: 16px;
+  color: var(--color-text-01);
+  text-align: left;
   width: 432px;
   height: 432px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  color: var(--color-text-01);
+  box-shadow: var(--shadow-drop);
+  border-radius: 24px;
+}
+.card:hover {
+  box-shadow: none;
+  border-color: var(--dark-white);
+  /*Свечение*/
 }
 
 .light-subtitle {
@@ -223,17 +238,17 @@ body {
   .container-right {
     height: 100px;
   }
-  .test-card-large {
+  .card {
     flex-wrap: nowrap;
     width: 320px;
     height: 120px;
     border-radius: 8px;
     cursor: pointer;
   }
-  .test-card-large:hover {
+  .card:hover {
     box-shadow: 0px 0px 5px 3px var(--color-btn-pulse);
   }
-  .test-card-large:active {
+  .card:active {
     animation: pulse 0.5s;
     box-shadow: 0 0 0 15px transparent;
   }
@@ -261,4 +276,4 @@ body {
   .status-container {
     width: 38px;
   }
-}
+}/*# sourceMappingURL=test_card.css.map */
