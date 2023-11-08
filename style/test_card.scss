@@ -1,7 +1,12 @@
+// @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap');
 @import './vars.css';
 @import './button.css';
 @import './progress_bar.css';
 @import './frame.css';
+
+// Vars
+
 
 // @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 
@@ -12,7 +17,8 @@
 }
 
 body {
-    font-family: Proxima Nova, monospace !important;
+    font-family: 'Proxima Nova', 'Montserrat', Arial, monospace !important;
+
     margin: 0px;
     padding: 0px;
     font-style: normal;
@@ -72,13 +78,13 @@ body {
 
 .subtitle {
     color: var(--color-text-03);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     text-align: center;
 
     &-dark {
         color: var(--dark-white);
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
         text-align: center
     }
@@ -93,10 +99,10 @@ body {
 
 .header {
     &__title {
-        color: var(var(--color-text-01));
+        color: rgba(0, 0, 0, .85);
         font-size: 30px;
         font-weight: 700;
-
+        letter-spacing: -1px;
 
         overflow: hidden;
         position: relative;
@@ -106,7 +112,7 @@ body {
         transition: all 0.1s ease-in;
         margin-top: -8px;
         margin-bottom: 8px;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
 
         padding: 0;
