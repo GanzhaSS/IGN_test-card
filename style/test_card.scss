@@ -15,10 +15,44 @@ $btn_height: 40px;
 $btn_width: 125px;
 $author_height: 80px;
 
-$color_bg: rgba(236, 236, 241, 0.6);
+
 $color_text: rgba(0, 0, 0, 0.85);
 $color_bg: transparent;
 $color_frame: rgba(197, 197, 228, 0.082);
+
+body {
+    --color_bg: #ebecf0;
+    --color_text: #323232;
+    --color_text_02: #808080;
+
+    --color-shadow-dark_40: #474f6166;
+    --color-shadow-dark_100: #484f60;
+    --color-shadow-light_0: #53090900;
+    --color-shadow-light_40: #ffffff66;
+    --color-shadow-light_100: #ffffff;
+
+
+    --shadow-flat: 0px 0px 20px var(--dark-white);
+
+    --shadow-drop: 6px 6px 10px -2px var(--color-shadow-dark_40),
+        -6px -6px 10px -1px var(--color-shadow-light_100);
+
+    --shadow-inner: inset -4px -4px 6px -1px var(--color-shadow-light_100),
+        inset 2px 2px 8px -1px var(--color-shadow-dark_40);
+
+}
+
+body.dark-theme {
+    --color_bg: #1a1b25;
+    --color_text: #f1f1f1;
+    --color_text: #b8b8b8;
+
+    --color-shadow-dark_40: #00000066;
+    --color-shadow-dark_100: #000000;
+    --color-shadow-light_0: #00000000;
+    --color-shadow-light_40: #22243066;
+    --color-shadow-light_100: #222430;
+}
 
 
 // Mixins
@@ -57,7 +91,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $color_bg;
+    background-color: var(--color_bg);
 }
 
 
@@ -78,7 +112,7 @@ body {
     align-items: stretch;
     justify-content: space-between;
     padding: $card_padding;
-    color: $color_text;
+    color: var(--color_text);
     text-align: left;
     width: $card_width;
     height: $card_height;
@@ -88,24 +122,17 @@ body {
 }
 
 .description_light {
-    color: var(--color-text-03);
+    color: var(--color_text_02);
     font-size: 14px;
     font-weight: 400;
 }
 
 
 .subtitle {
-    color: var(--color-text-03);
+    color: var(--color_text);
     font-size: 16px;
     font-weight: 700;
     text-align: center;
-
-    &-dark {
-        color: var(--dark-white);
-        font-size: 16px;
-        font-weight: 700;
-        text-align: center
-    }
 }
 
 // *** Content ***
@@ -126,7 +153,7 @@ body {
 }
 
 .title {
-    color: rgba(0, 0, 0, .85);
+    color: var(--color_text);
     font-size: 30px;
     height: 40px;
     font-weight: 700;
@@ -195,7 +222,7 @@ body {
 
 .status_percent {
     padding-top: 40px;
-    padding-bottom: 6px;
+    padding-bottom: 15px;
     color: var(--color-green);
     text-align: center;
     font-size: 16px;

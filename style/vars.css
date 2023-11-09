@@ -36,7 +36,7 @@
   --color-accent-blue: #2470A0;
   --color-bright-blue: #e038b6;
 
-  --color-shadow-dark_40: #474f6166;
+  /* --color-shadow-dark_40: #474f6166;
   --color-shadow-dark_100: #484f60;
   --color-shadow-light_0: #53090900;
   --color-shadow-light_40: #ffffff66;
@@ -48,7 +48,7 @@
     -6px -6px 10px -1px var(--color-shadow-light_100);
 
   --shadow-inner: inset -4px -4px 6px -1px var(--color-shadow-light_100),
-    inset 2px 2px 8px -1px var(--color-shadow-dark_40);
+    inset 2px 2px 8px -1px var(--color-shadow-dark_40); */
 
 
   --btn-height: 50px;
