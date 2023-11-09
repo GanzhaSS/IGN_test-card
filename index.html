@@ -14,16 +14,17 @@
 </head>
 
 <body>
-    <button class="btn-toggle button_pulse">Переключатель тёмной темы</button>
+    <div class="button  btn_mode">Dark mode</div>
     <div class="container">
         <div class="card">
-            <!-- ________________________  LEFT  ________________________ -->
-            <div class="container-left">
-                <div class="header">
-                    <div class="header__title">
+
+            <!-- *** Content ***  -->
+            <div class="content_container">
+                <div class="about_container">
+                    <div class="title">
                         Название теста
                     </div>
-                    <div class="header__description">
+                    <div class="description">
                         <p>
                             В идеальном мире текст результата всегда должен отвечать на вопрос в заголовке. Человек
                             заинтересовался вопросом в
@@ -34,10 +35,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="info">
-                    <div class="info__question">
-                        <!-- ________________________ SVG ________________________ -->
-                        <div class="icon info__question-icon">
+                <div class="info_container">
+                    <div class="question_container">
+                        <div class="icon question_icon">
                             <svg width="24" height="24" viewBox="0 0 24 25" fill="transparent"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -45,21 +45,19 @@
                                     fill="var(--color-text-03)" />
                             </svg>
                         </div>
-                        <!-- ________________________ SVG ________________________ -->
-                        <div class="info__question-text info__text">
-                            <div class="info__question-number">
+                        <div class="question_text_container">
+                            <div class="info_title question_title">
                                 25 вопросов
                             </div>
-                            <div class="info__question-time light-subtitle">
+                            <div class="description_light question_subtitle">
                                 (около 45 мин)
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="info__finish">
-                        <!-- ________________________ SVG ________________________ -->
-                        <div class="icon info__finish-icon">
+                    <div class="finish_container">
+                        <div class="icon finish_icon">
                             <svg width="24" height="24" viewBox="0 0 23 24" fill="transparent"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -68,87 +66,66 @@
                             </svg>
 
                         </div>
-                        <!-- ________________________ SVG ________________________ -->
-                        <div class="info__finish-text info__text">
-                            <div class="info__finish-data">
+                        <div class="finish_text_container">
+                            <div class="info_title finish_title">
                                 28.10.2023
                             </div>
-                            <div class="info__finish-time-remain light-subtitle">
+                            <div class="description_light finish_subtitle">
                                 (осталось 2 дня)
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <!-- ________________________  RIGHT  ________________________ -->
-            <div class="container-right">
-                <div class="status-container">
-                    <div class="status__percent">82%</div>
 
-                    <div class="status__result">
-                        <div class="status__points subtitle">Баллы:</div>
-                        <div class="status__points-result light-subtitle">20 из 25</div>
-                        <div class="status__attempts subtitle">Попытки:</div>
-                        <div class="status__attempts-result light-subtitle">2 из 5</div>
+            <!-- *** Status *** -->
+            <div class="status_container">
+                <div class="status_info_container">
+                    <div class="status_percent">82%</div>
+
+                    <div class="status_result_container">
+                        <div class="status_points subtitle">Баллы:</div>
+                        <div class="status_points-result description_light">20 из 25</div>
+                        <div class="status_attempts subtitle">Попытки:</div>
+                        <div class="status_attempts_result description_light">2 из 5</div>
                     </div>
                 </div>
-                <div class="bar-container">
-                    <div class="bar test-limit" style="height:82%">
+                <div class="bar_container">
+                    <div class="bar" style="height:82%">
                     </div>
                 </div>
             </div>
-            <!-- ________________________ BOTTOM ________________________ -->
-            <div class="container-bottom">
-                <div class="author__line"></div>
-                <div class="container-author">
-                    <!-- ________________________ SVG ________________________ -->
-                    <div class="author-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="transparent"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.9561 5C11.9561 7.20914 10.1652 9 7.95606 9C5.74692 9 3.95605 7.20914 3.95605 5C3.95605 2.79086 5.74692 1 7.95606 1C10.1652 1 11.9561 2.79086 11.9561 5Z"
-                                stroke="var(--color-text-03)" stroke-width="2" />
-                            <path
-                                d="M14 12.2508C13.44 11.6798 12.7733 11.2719 12.0267 11C10.8533 11.8429 9.38667 12.3323 7.84 12.3323C6.29333 12.3323 4.85333 11.8429 3.65333 11C1.52 11.7613 0 13.8006 0 16.2205V18.994C0 19.5378 0.453333 20 0.986667 20H12.3467C11.9733 18.8036 11.92 17.1994 12.64 15.1057C13.0133 14.1269 13.4667 13.2024 14 12.2508Z"
-                                fill="var(--color-text-03)" />
-                            <path
-                                d="M23.803 4.19015C23.4046 3.98299 21.2131 5.76976 18.9718 8.28158C18.9469 8.30748 18.922 8.33337 18.922 8.38516L18.15 12.5543L17.5523 10.4309C17.5025 10.3014 17.3281 10.2496 17.2534 10.3791C16.5561 11.2854 15.9087 12.2176 15.3608 13.1499C15.3359 13.1758 15.3359 13.2275 15.3359 13.2793L15.8837 17.552L14.4643 15.6617C14.3895 15.5581 14.2152 15.584 14.1654 15.7135C13.4681 17.6556 13.4681 19.3906 14.788 20.53L13.0448 23.5079C12.9202 23.741 13.0697 23.9999 13.3187 23.9999H14.7631C14.9125 23.9999 15.037 23.8963 15.0619 23.741C15.1615 23.2749 15.4355 22.2132 15.8588 21.1773C18.15 22.0837 19.9928 20.0898 21.3127 17.1636C21.3625 17.0341 21.2629 16.8788 21.1384 16.9047L18.8473 17.2413L22.3586 14.341C22.3835 14.3151 22.4084 14.2892 22.4084 14.2634C22.7571 13.124 23.0559 11.9328 23.305 10.8193C23.3299 10.6898 23.2303 10.5862 23.1057 10.6121L20.6403 11.1041L23.6785 8.41106C23.7034 8.38516 23.7283 8.33337 23.7283 8.30748C24.077 6.02871 24.077 4.34552 23.803 4.19015Z"
-                                fill="var(--color-text-03)" />
-                        </svg>
 
+            <!-- *** Author *** -->
+            <div class="card_profile">
+                <div class="card_profile__img">
+                    <img src="img/author__avatar.png" alt="Avatar">
+                </div>
+                <div class="card_profile__content">
+                    <div class="card_profile__name">
+                        Иванов Иван Иванович
                     </div>
-                    <!-- ________________________ SVG ________________________ -->
-
-                    <div class="author__avatar">
-                        <img src="img/author__avatar.png" alt="Avatar">
-                    </div>
-                    <div class="author__text">
-                        <div class="author__dev subtitle">Разработчик теста:</div>
-                        <div class="author__surname">Иванов</div>
-                        <div class="author__name">Иван Иванович</div>
-                        <div class="author__job-title light-subtitle">Ведущий инженер ОАСУ</div>
-                    </div>
-                    <div class="author__button button-ref button container-frame">
-                        Задать вопрос
+                    <div class="card_profile__email description_light">
+                        IvanovII@nornik.ru
                     </div>
                 </div>
-                <div class="author__line"></div>
-                <!-- _____________________ BUTTONS ______________________ -->
-                <div class="button_container ">
-
-                    <div class="button  button-disabled">
-                        Disabled
-                    </div>
-                    <div class="button button-secondary button_pulse container-frame">
-                        Посмотреть
-                    </div>
-                    <div class="button button-main button_pulse container-frame">
-                        Пройти тест
-                    </div>
-                </div>
-
             </div>
+
+            <!-- *** Buttons *** -->
+            <div class="buttons_container ">
+
+                <div class="buttdon  btn_disabled">
+                    Disabled
+                </div>
+                <div class="button btn_secondary">
+                    Посмотреть
+                </div>
+                <div class="button btn_primary">
+                    Пройти тест
+                </div>
+            </div>
+
+
         </div>
     </div>
 
