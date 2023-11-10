@@ -186,7 +186,7 @@ body {
 
 .status_info_container {
   opacity: 0;
-  background-image: url("../img/status_img.svg");
+  background-image: url("../icons/status_img.svg");
   background-repeat: no-repeat;
   background-position: top center;
   animation: percent-opacity 0.5s ease-out forwards;
