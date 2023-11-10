@@ -25,7 +25,7 @@ body {
 body.dark-theme {
   --color_bg: #1a1b25;
   --color_text: #dbdbdb;
-  --color_text_2: #a1a1a1;
+  --color_text_02: #a1a1a1;
   --color_frame_hover: #151620;
   --color_disabled: #313349;
   --color_btn_primary: #0b5589;
