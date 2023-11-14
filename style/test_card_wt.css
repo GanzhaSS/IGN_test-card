@@ -429,8 +429,27 @@ body {
 
 .footer_progress_text {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
+}
+
+.bar_container {
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5em;
+  box-shadow: var(--shadow-inner);
+  height: 15px;
+}
+
+.bar {
+  background-color: var(--color-green);
+  position: absolute;
+  bottom: 0;
+  height: 22%;
+  width: 60%;
+  box-sizing: border-box;
+  border-radius: inherit;
 }
 
 @font-face {
