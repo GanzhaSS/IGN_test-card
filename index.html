@@ -14,8 +14,13 @@
 
 </head>
 
+<!-- <body> -->
+
 <body>
-    <div class="button  btn_mode">Dark mode</div>
+    <div class="mode_container">
+        <div class="button  btn_mode">Темная тема</div>
+        <div class="button  btn_check">Radio</div>
+    </div>
 
     <div class="container">
         <div class="card_walkthrough">
@@ -222,9 +227,13 @@
                     </div>
                     <div class="variants_container">
                         <div class="variant">
-                            <div class="checkbox">
+                            <div class="checkbox" id="check">
                                 <input class="checkbox_input" id="checkbox_01" type="checkbox" name="group" />
                                 <label class="checkbox_btn" for="checkbox_01"></label>
+                            </div>
+                            <div class="radio" id="radio" style="display: none;">
+                                <input class="radio_input" id="radio_01" type="radio" name="group" />
+                                <label class="radio_btn" for="radio_01"></label>
                             </div>
                             <p class="variant_text">
                                 Определяется экспертной организацией, но не должен превышать пяти месяцев со дня
@@ -233,9 +242,13 @@
                             </p>
                         </div>
                         <div class="variant">
-                            <div class="checkbox">
+                            <div class="checkbox" id="check">
                                 <input class="checkbox_input" id="checkbox_02" type="checkbox" name="group" />
                                 <label class="checkbox_btn" for="checkbox_02"></label>
+                            </div>
+                            <div class="radio" id="radio" style="display: none;">
+                                <input class="radio_input" id="radio_02" type="radio" name="group" />
+                                <label class="radio_btn" for="radio_02"></label>
                             </div>
                             <p class="variant_text">
                                 Срок проведения экспертизы определяется сложностью объекта экспертизы, но не должен
@@ -245,9 +258,13 @@
                             </p>
                         </div>
                         <div class="variant">
-                            <div class="checkbox">
+                            <div class="checkbox" id="check">
                                 <input class="checkbox_input" id="checkbox_03" type="checkbox" name="group" />
                                 <label class="checkbox_btn" for="checkbox_03"></label>
+                            </div>
+                            <div class="radio" id="radio" style="display: none;">
+                                <input class="radio_input" id="radio_03" type="radio" name="group" />
+                                <label class="radio_btn" for="radio_03"></label>
                             </div>
                             <p class="variant_text">
                                 Определяется заказчиком экспертизы, но не должен превышать двух месяцев со дня получения
