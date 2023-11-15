@@ -1,20 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 // Vars
-$card_padding: 10px;
-$card_height: 600px;
-$card_width: 1000px;
-$content_height: 480px;
-$content_width: 800px;
+$card_height: 800px;
+$card_width: 1400px;
+$content_height: 680px;
+$content_width: 760px;
 $content_padding: 20px;
 
 $btn_height: 40px;
-$btn_width: 125px;
+$btn_width: 180px;
 $author_height: 80px;
 $height_sm: 25px;
 
 
 body {
-    --color_bg: #ebecf0;
+    --color_bg: transparent;
     --color_text: #323232;
     --color_text_blue: #0b5589;
     --color_text_02: #808080;
@@ -22,14 +20,14 @@ body {
     --color_checkbox_bg: transparent;
     --color_frame_hover: #f1f1f1;
     --color_nav: #ffffff33;
-    --color_disabled: #b8b8b8;
+    --color_disabled: #e2e2e2;
     --color_btn_primary: #0b5589;
     --color_btn_text_primary: #ebecf0;
     --color_btn_secondary: transparent;
     --color_btn_radio: transparent;
     --color_btn_text_secondary: #2470a0;
     --color_subtitle: #0b5589;
-    --color_footer: #363640;
+    --color_footer: rgb(207, 205, 205);
 
 
     --color-shadow-dark_40: #474f6166;
@@ -41,6 +39,10 @@ body {
     --color-green: #379217;
 
     // Shadow
+    // --shadow_standart_IGN: #64646f33 0px 7px 29px 0px;
+    --shadow_standart_IGN: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
     --shadow-flat: 0px 1px 8px var(--color-shadow-dark_40);
     --shadow-light: 0px 0px 20px -2px var(--color_disabled);
     --shadow-drop: 4px 4px 6px var(--color-shadow-dark_40),
@@ -96,6 +98,7 @@ body.dark-theme {
     position: relative;
     outline: none;
     transition: all 250ms ease-in-out;
+    box-shadow: var(--shadow_standart_IGN);
 }
 
 @mixin hover() {
@@ -146,17 +149,8 @@ body {
     gap: 30px;
 }
 
-// *** Full page container
-// .container {
-//     display: flex;
-//     justify-content: center;
-//     width: 100%;
-//     flex-wrap: wrap;
-// }
-
 .card_walkthrough {
     @include shared-styles;
-    font-family: 'Proxima Nova Regular';
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -166,8 +160,7 @@ body {
     color: var(--color_text);
     text-align: left;
     width: $card_width;
-    height: $card_height;
-    box-shadow: var(--shadow-drop);
+    max-height: $card_height;
     border-radius: 1.5em;
     user-select: none;
 }
@@ -202,10 +195,18 @@ body {
 }
 
 .title {
-    font-family: 'Proxima Nova SemiBold';
     font-size: 30px;
-    font-weight: 1500px;
+    font-weight: bold;
     letter-spacing: -1.8px;
+}
+
+.time_container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    // width: 200px;
 }
 
 .time_frame_container {
@@ -213,36 +214,23 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--color_footer);
-    padding: calc($content_padding /2);
+    padding: $content_padding;
     border-radius: 1em;
     height: $btn_height;
 }
 
-.time_container {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    flex-direction: row;
-    gap: 10px;
-    width: 200px;
-}
-
 .time_title {
     text-align: right;
-    text-align: right;
     font-size: 16px;
-    font-weight: 700;
-    line-height: normal;
-    color: var(--color_text_02);
+    font-weight: bold;
+    color: var(--color_text);
 }
 
 .time {
     color: var(--color_text_blue_bright);
     text-align: right;
-    font-family: Zen Dots;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: normal
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .main_container {
@@ -256,7 +244,7 @@ body {
 // *** Nav ***
 .nav {
     padding: $content_padding - 4px;
-    width: 200px;
+    width: 250px;
     height: $content_height;
     background: var(--color_nav);
     overflow: auto;
@@ -283,7 +271,7 @@ body {
 
 
 .nav_title {
-    font-family: 'Proxima Nova SemiBold';
+    font-weight: bold;
     color: var(--color_text);
     font-size: 18px;
 }
@@ -344,7 +332,7 @@ a {
     flex-wrap: nowrap;
     flex: 1 1 auto;
     height: $content_height;
-    width: $content_width - $content_padding * 2;
+    width: $content_width;
     text-align: left;
     padding: $content_padding;
     overflow: auto;
@@ -360,22 +348,19 @@ a {
 
 .section_num,
 .question_num {
-    font-family: 'Proxima Nova SemiBold';
     font-size: 14px;
-    font-weight: 700;
+    font-weight: bold;
     color: var(--color_text_blue);
 }
 
 .section_title {
-    font-family: 'Proxima Nova Bold';
     font-size: 20px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .question_title {
-    font-family: Proxima Nova;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: bold;
     text-wrap: balance;
 }
 
@@ -510,7 +495,8 @@ a {
 .buttons_container {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: end;
+    gap: 50px;
     align-items: center;
     margin-top: 40px;
 }
@@ -519,7 +505,6 @@ a {
     @include shared-styles();
     @include hover();
     @include btnFontStyle();
-    box-shadow: var(--shadow-drop);
     cursor: pointer;
     user-select: none;
     height: $btn_height;
@@ -541,15 +526,15 @@ a {
     }
 }
 
-.btn_finish {
-    width: $btn_width * 1.5;
-    margin-right: 250px;
-}
+// .btn_finish {
+//     width: $btn_width * 1.5;
+//     margin-right: 250px;
+// }
 
-.btn_mode,
-.btn_check {
-    width: $btn_width * 1.5;
-}
+// .btn_mode,
+// .btn_check {
+//     width: $btn_width * 1.5;
+// }
 
 // Исправить цвета!
 .btn_primary {
@@ -580,25 +565,24 @@ a {
 }
 
 // *** Footer ***
-.footer {
+.info_panel {
     display: flex;
+    width: 250px;
     gap: 80px;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background-color: var(--color_footer);
     flex-wrap: nowrap;
-    flex: 1 0 auto;
-    border-radius: 0 0 1.5em 1.5em;
+    // flex: 1 0 auto;
+    border-radius: 0 0 1.5em 0;
     border-bottom-width: 1px;
     border-bottom-color: var(--color_disabled);
     border-bottom-style: solid;
-    color: var(--color_btn_text_primary);
-    font-family: Proxima Nova;
+    color: var(--color_text);
     font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding: 0 $content_padding;
+    font-weight: bold;
+    padding: 0 $content_padding 0 0;
 }
 
 .footer_time_icon {
@@ -693,31 +677,7 @@ a {
 
 
 @font-face {
-    font-family: 'Proxima Nova Regular';
-    src: url('../fonts/ProximaNova-Regular.eot');
-    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ProximaNova-Regular.woff') format('woff'),
+    font-family: 'Proxima Nova';
+    src:
         url('../fonts/ProximaNova-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Proxima Nova Bold';
-    src: url('../fonts/ProximaNova-Bold.eot');
-    src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ProximaNova-Bold.woff') format('woff'),
-        url('../fonts/ProximaNova-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Proxima Nova Semibold';
-    src: url('../fonts/ProximaNova-Semibold.eot');
-    src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ProximaNova-Semibold.woff') format('woff'),
-        url('../fonts/ProximaNova-Semibold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
