@@ -147,10 +147,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    background-color: #B34C4C;
 }
 
 .card_walkthrough {
-    @include shared-styles;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -159,12 +159,10 @@ body {
     flex-flow: column wrap;
     color: var(--color_text);
     text-align: left;
-    min-width: $card_width;
-    max-width: 2048px;
-    width: 70vw;
-    min-height: $card_height;
-    height: $card_height;
-    border-radius: 1.5em;
+    max-width: 1920px;
+    min-height: 800px;
+    max-height: 100vh;
+    max-height: calc(100vh - 80px);
     user-select: none;
 }
 
@@ -190,10 +188,11 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-radius: 1.5em 1.5em 0 0;
-    border-bottom-width: 1px;
-    border-bottom-color: var(--color_disabled);
-    border-bottom-style: solid;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--color_disabled), var(--color_bg), var(--color_disabled));
+    border-left: 0;
+    border-right: 0;
     color: var(--color_text);
 }
 
@@ -212,11 +211,32 @@ body {
 
 // *** Nav ***
 .nav {
+    // flex-grow: 10;
+    // max-height: 80vh;
+    max-height: calc(100vh - 180px);
     padding: $content_padding;
     padding-top: $content_padding - 4px;
-    min-width: 250px;
-    height: $content_height;
+    min-width: 350px;
     overflow: auto;
+    background-color: #8d8db5;
+}
+
+.nav::-webkit-scrollbar,
+.variants_container::-webkit-scrollbar {
+    width: 3px;
+}
+
+body::-webkit-scrollbar-track,
+.nav::-webkit-scrollbar-track,
+.variants_container::-webkit-scrollbar-track {
+    background: rgba(211, 209, 209, 0);
+}
+
+body::-webkit-scrollbar-thumb,
+.nav::-webkit-scrollbar-thumb,
+.variants_container::-webkit-scrollbar-thumb {
+    background-color: rgb(133, 133, 133);
+    border-radius: 20px;
 }
 
 .nav_title {
@@ -276,7 +296,6 @@ a {
 // *** Content ***
 .content {
     color: var(--color_text);
-    background-color: var(--color_content_bg);
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -285,7 +304,6 @@ a {
     flex-wrap: nowrap;
     text-align: left;
     padding: $content_padding;
-    overflow: auto;
 }
 
 .question_container,
@@ -296,21 +314,14 @@ a {
     gap: 5px;
 }
 
-.section_num,
-.question_num {
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--color_text_blue);
-}
-
-.section_title {
-    font-size: 20px;
-    font-weight: bold;
-    // text-wrap: balance;
-}
+// .section_title {
+//     font-size: 20px;
+//     font-weight: bold;
+//     text-wrap: balance;
+// }
 
 .question_title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-wrap: balance;
 }
@@ -319,17 +330,22 @@ a {
 .variant {
     display: flex;
     flex-wrap: nowrap;
-    // align-items: start;
     justify-content: start;
     gap: 30px;
 }
 
 .variants_container {
-    margin-top: 10px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 30px;
+    // max-height: 58vh;
+    max-height: calc(100vh - 380px);
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    overflow: auto;
 }
 
 .variant_text {
@@ -339,13 +355,26 @@ a {
 }
 
 // *** Buttons ***
-.buttons_container {
+.top_content_container {
     display: flex;
     width: 100%;
-    justify-content: end;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-question_num {
+    justify-self: start;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: -30px;
+    color: var(--color_text_blue);
+}
+
+.buttons_container {
+    display: flex;
+    justify-content: center;
     gap: 50px;
     align-items: center;
-    margin-top: 40px;
 }
 
 .button {
@@ -403,8 +432,9 @@ a {
     border-radius: 1.3em;
 }
 
-// *** Footer ***
+// *** Info ***
 .info_panel {
+    // max-height: 85vh;
     display: flex;
     min-width: 250px;
     gap: 50px;
@@ -412,20 +442,19 @@ a {
     align-items: center;
     justify-content: start;
     flex-wrap: nowrap;
-    border-radius: 0 0 1.5em 0;
     color: var(--color_text);
     font-size: 16px;
     font-weight: bold;
-    padding: 15px $content_padding;
+    padding: $content_padding;
     background-color: var(--color_info);
 }
 
-.progress_title,
-.time_title {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
+// .progress_title,
+// .time_title {
+//     text-align: center;
+//     font-size: 18px;
+//     margin-bottom: 15px;
+// }
 
 .time {
     display: flex;
@@ -434,10 +463,10 @@ a {
     background-color: var(--color_info);
     padding: $content_padding;
     border-radius: 1.3em;
-    height: $btn_height * 1.5;
+    height: $btn_height ;
     box-shadow: var(--shadow-inner);
-    color: var(--color_btn_primary);
+    color: var(--color_text_blue);
     text-align: right;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
 }
