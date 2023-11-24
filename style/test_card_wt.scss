@@ -156,7 +156,7 @@ body {
 }
 
 .main_container {
-    @include disp-flex(row, start);
+    @include disp-flex(row, start, space-between);
 }
 
 // *** Nav ***
@@ -311,6 +311,7 @@ a {
     @include btnFontStyle();
     @include disp-flex(row, center, center);
     cursor: pointer;
+    text-align: center;
     user-select: none;
     width: $btn_width;
     padding: 8px 20px;
@@ -345,24 +346,15 @@ a {
 
 // *** Info ***
 .info_panel {
-    display: flex;
-    min-width: 250px;
+    @include disp-flex(column, center, start);
     gap: 50px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    flex-wrap: nowrap;
-    color: var(--color_text);
-    font-size: 16px;
-    font-weight: bold;
+    min-width: 250px;
     padding: $content_padding;
     background-color: var(--color_info);
 }
 
 .time {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include disp-flex(column, center, center);
     background-color: var(--color_info);
     padding: $content_padding;
     border-radius: 1.3em;

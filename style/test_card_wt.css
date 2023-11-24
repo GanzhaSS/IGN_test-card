@@ -286,6 +286,7 @@ a {
   justify-content: center;
   flex-wrap: nowrap;
   cursor: pointer;
+  text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -324,23 +325,22 @@ a {
 
 .info_panel {
   display: flex;
-  min-width: 250px;
-  gap: 50px;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   flex-wrap: nowrap;
-  color: var(--color_text);
-  font-size: 16px;
-  font-weight: bold;
+  gap: 50px;
+  min-width: 250px;
   padding: 20px;
   background-color: var(--color_info);
 }
 
 .time {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-wrap: nowrap;
   background-color: var(--color_info);
   padding: 20px;
   border-radius: 1.3em;
