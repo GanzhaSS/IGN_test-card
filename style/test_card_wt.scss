@@ -147,7 +147,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background-color: #B34C4C;
 }
 
 .card_walkthrough {
@@ -211,14 +210,11 @@ body {
 
 // *** Nav ***
 .nav {
-    // flex-grow: 10;
-    // max-height: 80vh;
     max-height: calc(100vh - 180px);
     padding: $content_padding;
     padding-top: $content_padding - 4px;
     min-width: 350px;
     overflow: auto;
-    background-color: #8d8db5;
 }
 
 .nav::-webkit-scrollbar,
@@ -306,24 +302,11 @@ a {
     padding: $content_padding;
 }
 
-.question_container,
-.section_container {
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-// .section_title {
-//     font-size: 20px;
-//     font-weight: bold;
-//     text-wrap: balance;
-// }
-
 .question_title {
     font-size: 20px;
     font-weight: bold;
     text-wrap: balance;
+    padding: $content_padding;
 }
 
 // *** Variants ***
@@ -335,12 +318,13 @@ a {
 }
 
 .variants_container {
-    margin: 20px;
+    padding: $content_padding;
+    margin-left: $content_padding;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 30px;
-    // max-height: 58vh;
+    max-height: 58vh;
     max-height: calc(100vh - 380px);
     justify-content: start;
     align-items: start;
@@ -349,7 +333,7 @@ a {
 }
 
 .variant_text {
-    margin-top: 0px;
+    margin-top: -5px;
     text-wrap: balance;
     text-align: left;
 }
@@ -358,15 +342,15 @@ a {
 .top_content_container {
     display: flex;
     width: 100%;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
 }
 
 .top-question_num {
     justify-self: start;
+    margin-left: $content_padding;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: -30px;
     color: var(--color_text_blue);
 }
 
@@ -448,13 +432,6 @@ a {
     padding: $content_padding;
     background-color: var(--color_info);
 }
-
-// .progress_title,
-// .time_title {
-//     text-align: center;
-//     font-size: 18px;
-//     margin-bottom: 15px;
-// }
 
 .time {
     display: flex;

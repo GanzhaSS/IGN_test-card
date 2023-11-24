@@ -88,7 +88,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  background-color: #B34C4C;
 }
 
 .card_walkthrough {
@@ -157,7 +156,6 @@ body {
   padding-top: 16px;
   min-width: 350px;
   overflow: auto;
-  background-color: #8d8db5;
 }
 
 .nav::-webkit-scrollbar,
@@ -246,18 +244,11 @@ a {
   padding: 20px;
 }
 
-.question_container,
-.section_container {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
 .question_title {
   font-size: 20px;
   font-weight: bold;
   text-wrap: balance;
+  padding: 20px;
 }
 
 .variant {
@@ -268,11 +259,13 @@ a {
 }
 
 .variants_container {
-  margin: 20px;
+  padding: 20px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 30px;
+  max-height: 58vh;
   max-height: calc(100vh - 380px);
   justify-content: start;
   align-items: start;
@@ -281,7 +274,7 @@ a {
 }
 
 .variant_text {
-  margin-top: 0px;
+  margin-top: -5px;
   text-wrap: balance;
   text-align: left;
 }
@@ -289,15 +282,15 @@ a {
 .top_content_container {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
 }
 
 .top-question_num {
   justify-self: start;
+  margin-left: 20px;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: -30px;
   color: var(--color_text_blue);
 }
 
