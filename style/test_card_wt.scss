@@ -339,6 +339,16 @@ a {
 }
 
 // *** Buttons ***
+.top_shadow {
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--color_disabled), var(--color_bg), var(--color_disabled));
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+
+}
+
 .top_content_container {
     display: flex;
     width: 100%;
